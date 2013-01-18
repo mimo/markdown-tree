@@ -12,7 +12,7 @@ Basically this is a Sinatra script to serve a hierarchy / tree directory of mark
 
 This is a forked project from [mil](https://github.com/mil/markdown-tree). The goal of this fork is to create a template with a sitebar folder structure with different styling than the original project.
 
-![Screenshot of markdown tree](preview.png)
+![Screenshot of markdown tree](markdown-tree/blob/master/preview.png)
 
 Why
 ---

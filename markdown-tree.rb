@@ -21,8 +21,12 @@ get '/*' do
 	if File.directory?(folder) then
 		file = "index"
 	else
-		folder.gsub!(/\/[^\/]+$/,"")
-		file = path.pop
+		if File.file?(folder) then
+			send_file folder
+		else
+			folder.gsub!(/\/[^\/]+$/,"")
+			file = path.pop
+		end
 	end
 
 	#Get children of current folder

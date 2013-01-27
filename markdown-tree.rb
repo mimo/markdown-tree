@@ -63,9 +63,13 @@ def getChildren(folderPath)
 		next if child.match(/^(index.#{$config['markdown-extension']}|\.+)$/)
 
 		#Children folder or file
-		if File.directory?("#{folderPath}/#{child}") then 
-			children[:directories].push(child)
-		else
+		child_path = "#{folderPath}/#{child}"
+		if File.directory?(child_path) then 
+			child_pages = getChildren(child_path)[:pages]
+			children[:directories].push(child) unless child_pages.empty?
+ 		else
+			next if not child.match(/.+\.#{$config['markdown-extension']}/)
+
 			#Throw away extension and push
 			children[:pages].push(child.gsub!(/\.[^.]+$/, ''))
 		end	

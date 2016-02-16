@@ -87,6 +87,7 @@ ul li ul li ul {
 #path a:last-child {
 	color:#eee;
 	font-size: 14px;
+	text-decoration: none;
 }
 
 
@@ -104,6 +105,7 @@ background: -webkit-linear-gradient(left, #707070 95%,#565656 100%); /* Chrome10
 
 #menu a{
 	color:#ddd;
+	text-decoration: none;	
 }
 #menu .current a, #menu li a:hover{
 	color:#333;
